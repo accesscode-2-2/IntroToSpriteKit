@@ -123,7 +123,8 @@ const int kBorderCategory = 2;
     topWall.physicsBody.dynamic = NO;
     topWall.physicsBody.categoryBitMask = kWallCategory;
     
-    SKSpriteNode *scoreLine = [SKSpriteNode spriteNodeWithColor:[UIColor redColor] size:CGSizeMake(1,CGRectGetHeight(self.frame))];
+    // ADDED: Changed the line color from red to clear (we don't want to see the scoreline)
+    SKSpriteNode *scoreLine = [SKSpriteNode spriteNodeWithColor:[SKColor clearColor] size:CGSizeMake(1,CGRectGetHeight(self.frame))];
     scoreLine.position = CGPointMake(topWall.size.width/2,0);
     scoreLine.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:scoreLine.size];
     scoreLine.physicsBody.categoryBitMask = kBorderCategory;
